@@ -19,3 +19,7 @@ spring:
           kite:
             transport: http
             url: https://mcp.kite.trade/mcp
+
+logging:
+  level:
+    org.springframework.ai.mcp: DEBUG

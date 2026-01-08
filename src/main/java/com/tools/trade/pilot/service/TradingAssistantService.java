@@ -20,8 +20,9 @@ public class TradingAssistantService {
         return chatClient.prompt()
                 .system("""
                             You are a trading assistant.
-                            You must use MCP tools for live market data.
-                            Never assume prices.
+                            For any market data, index value, price, or quote,
+                            you MUST call an MCP tool.
+                            Never answer from memory.
                         """)
                 .user(query)
                 .toolCallbacks(toolCallbackProvider.getToolCallbacks())
