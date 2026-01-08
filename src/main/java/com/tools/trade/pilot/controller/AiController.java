@@ -23,7 +23,7 @@ public class AiController {
 
     @Operation(summary = "Ask trading-related questions", description = "Uses Qwen LLM with MCP tools (Zerodha Kite) for live market data")
     @GetMapping("/ask")
-    public String ask(@RequestParam(required = true) String q) {
-        return tradingAssistantService.ask(q);
+    public String ask(@RequestParam(required = true) String query) {
+        return tradingAssistantService.ask(query);
     }
 }

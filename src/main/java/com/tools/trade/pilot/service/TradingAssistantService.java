@@ -16,14 +16,14 @@ public class TradingAssistantService {
         this.toolCallbackProvider = toolCallbackProvider;
     }
 
-    public String ask(final String question) {
+    public String ask(final String query) {
         return chatClient.prompt()
                 .system("""
                             You are a trading assistant.
                             You must use MCP tools for live market data.
                             Never assume prices.
                         """)
-                .user(question)
+                .user(query)
                 .toolCallbacks(toolCallbackProvider.getToolCallbacks())
                 .call()
                 .content();
