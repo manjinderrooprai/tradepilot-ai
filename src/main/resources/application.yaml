@@ -15,11 +15,7 @@ spring:
         version: 1.0.0
         request-timeout: 30s
         type: SYNC  # or ASYNC for reactive applications
-        streamable-http:
-          connections:
-            kites-mcp:
-              url: https://mcp.kite.trade/mcp
-logging:
-  level:
-    org.springframework.ai.mcp: DEBUG
-    org.springframework.ai.ollama: DEBUG
+        servers:
+          kite:
+            transport: http
+            url: https://mcp.kite.trade/mcp
