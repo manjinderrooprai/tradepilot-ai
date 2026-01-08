@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: Tradepilot-ai
+  ai:
+    openai:
+      base-url: http://localhost:12434/v1
+      api-key: dummy
+      chat:
+        options:
+          model: qwen3
+          temperature: 0.2
+    mcp:
+      client:
+        streamable-http:
+          connections:
+            zerodha-kites-mcp:
+              url: https://mcp.kite.trade/mcp
+logging:
+  level:
+    org.springframework.ai.mcp: DEBUG

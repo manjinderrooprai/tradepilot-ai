@@ -1,0 +1,13 @@
+package com.tools.trade.pilot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TradepilotAiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TradepilotAiApplication.class, args);
+	}
+
+}
